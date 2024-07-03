@@ -1,0 +1,23 @@
+generator client {
+    provider        = "prisma-client-js"
+    previewFeatures = ["prismaSchemaFolder"]
+}
+
+datasource db {
+    provider = "postgresql"
+    url      = env("DATABASE_URL")
+}
+
+model User {
+    id   Int    @id
+    name String
+
+    posts Post[]
+}
+
+model Post {
+    id Int @id
+
+    userId Int?
+    User   User? @relation(fields: [userId], references: [id])
+}

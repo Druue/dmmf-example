@@ -1,0 +1,6 @@
+{
+    "imports": {
+        "prisma-schema-wasm": "npm:@prisma/prisma-schema-wasm@5.17.0-1.perf-query-raw-serialization-e47383c417b1d157566b509938893a9b8ada2aad",
+        "fs": "https://deno.land/std@0.224.0/fs/mod.ts"
+    }
+}
